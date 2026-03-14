@@ -1,0 +1,82 @@
+name: "🚀 Sprint Plan"
+description: "Create a sprint plan"
+title: "[SPRINT-XX] "
+labels: ["type:sprint"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Sprint Title
+      placeholder: "e.g., PESU Evals Scoring MVP"
+    validations:
+      required: true
+  - type: input
+    id: sprint_number
+    attributes:
+      label: Sprint Number
+      placeholder: "1, 2, 3, etc."
+    validations:
+      required: true
+  - type: input
+    id: sprint_dates
+    attributes:
+      label: Sprint Dates
+      placeholder: "Mar 1-14, 2026"
+      description: "Sprint start and end dates"
+    validations:
+      required: true
+  - type: textarea
+    id: sprint_goal
+    attributes:
+      label: Sprint Goal (Required)
+      placeholder: "What is the primary objective for this sprint?"
+    validations:
+      required: true
+  - type: textarea
+    id: committed_stories
+    attributes:
+      label: Committed User Stories
+      placeholder: |
+        | # | Story | Points |
+        |---|-------|--------|
+        | #100 | [STORY] Title | 5 |
+        | #101 | [STORY] Title | 3 |
+      description: "Stories committed in table format"
+  - type: input
+    id: total_points
+    attributes:
+      label: Total Committed Points
+      placeholder: "e.g., 13"
+  - type: textarea
+    id: team_capacity
+    attributes:
+      label: Team Capacity
+      placeholder: "e.g., 5 engineers, 40 hours total capacity"
+      description: "Team size and available capacity"
+  - type: textarea
+    id: standalone_tasks
+    attributes:
+      label: Standalone Tasks
+      placeholder: "#200, #201"
+      description: "Non-story tasks in this sprint"
+  - type: textarea
+    id: risks_blockers
+    attributes:
+      label: Risks & Blockers
+      placeholder: "Known issues that could impact delivery"
+  - type: textarea
+    id: client_summary
+    attributes:
+      label: Client-Facing Summary
+      placeholder: "High-level summary for stakeholders"
+  - type: markdown
+    attributes:
+      value: |
+        ## Sprint Close Checklist
+        - [ ] All committed stories completed
+        - [ ] Code reviewed and merged
+        - [ ] Testing complete
+        - [ ] Documentation updated
+        - [ ] Sprint retrospective scheduled
+        - [ ] Metrics collected (velocity, burndown)
+        - [ ] Next sprint planned

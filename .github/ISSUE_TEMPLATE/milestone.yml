@@ -1,0 +1,84 @@
+name: "🏁 Milestone"
+description: "Create a delivery milestone"
+title: "[MILESTONE] "
+labels: ["type:milestone"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Milestone Title
+      placeholder: "e.g., PESU Evals v1.0 — Production Ready"
+      description: "Clear, outcome-focused milestone name"
+    validations:
+      required: true
+  - type: input
+    id: target_date
+    attributes:
+      label: Target Date
+      placeholder: "Q3 2025 or YYYY-MM-DD"
+      description: "When should this milestone be complete?"
+    validations:
+      required: true
+  - type: dropdown
+    id: product_area
+    attributes:
+      label: Product Area
+      options:
+        - "PESU Evals"
+        - "Course Generation"
+        - "Digital Strategy"
+        - "Alumni Portal"
+        - "Platform"
+        - "Internal"
+        - "Cross-product"
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      placeholder: "Why are we building this? What problem does it solve?"
+      description: "Business and product context"
+    validations:
+      required: true
+  - type: textarea
+    id: success_criteria
+    attributes:
+      label: Success Criteria
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+      description: "What does done look like? Use checkboxes."
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "P0 - Critical"
+        - "P1 - High"
+        - "P2 - Normal"
+        - "P3 - Low"
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      placeholder: "@username"
+      description: "Primary owner (use @mention)"
+    validations:
+      required: true
+  - type: textarea
+    id: linked_epics
+    attributes:
+      label: Linked Epics
+      placeholder: "#123, #456"
+      description: "Epic issue numbers this milestone contains"
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks & Blockers
+      placeholder: "Known risks, dependencies, or blockers"

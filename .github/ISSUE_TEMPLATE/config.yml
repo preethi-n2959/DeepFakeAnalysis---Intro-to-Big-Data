@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Framework Overview
+    url: docs/framework.md
+    about: See our workflow framework
+  - name: Label Reference
+    url: docs/labels.md
+    about: Learn more about our project labels
+  - name: Sprint Playbook
+    url: docs/sprint-playbook.md
+    about: Reference for running sprints

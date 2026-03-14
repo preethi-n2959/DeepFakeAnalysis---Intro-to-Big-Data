@@ -1,0 +1,88 @@
+name: "🔷 Epic"
+description: "Create a product capability epic"
+title: "[EPIC] "
+labels: ["type:epic"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Epic Title
+      placeholder: "e.g., Automate Rubric Scoring"
+      description: "High-level product capability"
+    validations:
+      required: true
+  - type: dropdown
+    id: product_area
+    attributes:
+      label: Product Area
+      options:
+        - "PESU Evals"
+        - "Course Generation"
+        - "Digital Strategy"
+        - "Alumni Portal"
+        - "Platform"
+        - "Internal"
+    validations:
+      required: true
+  - type: input
+    id: parent_milestone
+    attributes:
+      label: Parent Milestone (Optional)
+      placeholder: "#123"
+      description: "Link to parent milestone issue"
+  - type: textarea
+    id: capability_description
+    attributes:
+      label: Capability Description
+      placeholder: "What product capability are we building? Why?"
+      description: "User-facing value and problem context"
+    validations:
+      required: true
+  - type: textarea
+    id: definition_of_done
+    attributes:
+      label: Definition of Done
+      placeholder: |
+        - [ ] All child stories complete
+        - [ ] Code reviewed
+        - [ ] Tests passing
+      description: "What must be true for this epic to be done?"
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - "P0 - Critical"
+        - "P1 - High"
+        - "P2 - Normal"
+        - "P3 - Low"
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      placeholder: "@username"
+      description: "Epic lead"
+    validations:
+      required: true
+  - type: input
+    id: target_sprint_range
+    attributes:
+      label: Target Sprint Range
+      placeholder: "Sprint 5-7"
+      description: "When should this ship?"
+  - type: textarea
+    id: known_stories
+    attributes:
+      label: Known User Stories
+      placeholder: "#100, #101, #102"
+      description: "Story issue numbers"
+  - type: textarea
+    id: technical_context
+    attributes:
+      label: Technical Context
+      placeholder: "Architecture, tech stack, constraints"
+      description: "Technical decisions and context"
